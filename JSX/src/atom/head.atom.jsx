@@ -26,24 +26,46 @@ function Head(){
         }
     ]
 
-    // let optSelect = "None";
-    const [selectOpt, setSelect] = useState("None");
+
+    const initialAnswers = [null, null, null]
+    const [userAnswers, setSelect] = useState(initialAnswers);
+    const[currentQtn, setCurrent] = useState(0);
+    
+    const selectedAns = userAnswers[currentQtn];
     function select(opt){
-        setSelect(opt);
+        const newUserAnswers = [...userAnswers];
+        newUserAnswers[currentQtn] = opt;
+
+        setSelect(newUserAnswers);
     }
+
+    function toNext(){
+       setCurrent(currentQtn + 1);
+    }
+
+    function toPrev(){
+        if(currentQtn > 0){
+            setCurrent(currentQtn - 1);
+        }
+        
+    }
+
     return(
         <>
         <div className='head-container'>
             <h3>Quiz App</h3>
         <h4>Question 1</h4>
-        <p>{arrQtns[0].question}</p>
+        <p>{arrQtns[currentQtn].question}</p>
 
-        {arrQtns[0].option.map((opt) => (
-           <li onClick={() => select(opt)} className='list'>{opt}</li> 
+        {arrQtns[currentQtn].option.map((opt) => (
+           <li onClick={() => select(opt)} className={'list' + (selectedAns === opt ? " choice" : "")}>{opt}</li> 
         ))}
-        <p className='changer' >Option Selected: {selectOpt}</p>
         </div>
          
+        <div className="btn-holder">
+        <div><button className="left-btn" onClick={toPrev} disabled={currentQtn===0}>Previous</button></div>
+        <div><button className="right-btn" onClick={toNext} disabled={!selectedAns}>Next</button></div>
+      </div>
         </>
        
     )

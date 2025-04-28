@@ -1,5 +1,4 @@
 import Head from './atom/head.atom'
-import Buttons from './molecule/buttons.molecule'
 import './App.css'
 
 function App() {
@@ -8,10 +7,6 @@ function App() {
     <div className='main-container'>
       <div className='container-one'>
          <Head />
-      </div>
-   
-      <div className="container-two">
-        <Buttons />
       </div>
     </div>
       
