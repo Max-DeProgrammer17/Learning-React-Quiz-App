@@ -1,9 +1,8 @@
-#root {
-  margin: 0 auto;
-  padding: 0;
-}
+
 
 .main-container{
-  background-color: black;
-  
+  /* background-color: red; */
+  width: 900px;
+  height: 470px;
+  border-radius: 0.2rem;
 }
