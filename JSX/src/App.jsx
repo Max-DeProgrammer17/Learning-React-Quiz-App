@@ -1,5 +1,4 @@
 import Head from './atom/head.atom'
-import Option from './atom/option.atom'
 import Buttons from './molecule/buttons.molecule'
 import './App.css'
 
@@ -10,11 +9,8 @@ function App() {
       <div className='container-one'>
          <Head />
       </div>
-      <div className="container-two">
-        <Option />
-      </div>
    
-      <div className="container-three">
+      <div className="container-two">
         <Buttons />
       </div>
     </div>
