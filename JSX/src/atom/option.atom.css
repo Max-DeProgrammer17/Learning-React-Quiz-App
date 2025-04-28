@@ -6,4 +6,15 @@
     padding: 8px 0px 8px 9px;
     border-radius: 0.2rem;
     background-color: aqua;
+    margin-left: -25px;
+    transition: 0.3s ease-in-out;
+}
+
+.options ul > li:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+.options p{
+    font-size: 1.2rem;
+    margin-top: -25px;
 }

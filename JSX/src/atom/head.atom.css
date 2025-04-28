@@ -1,5 +1,5 @@
 
-h2, h3{
+h4, h3{
     text-align: center;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -8,10 +8,8 @@ h2, h3{
 p{
     font-weight: 500;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .head-container{
-    
-    padding: 2px;
 }

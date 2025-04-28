@@ -3,8 +3,8 @@ function Head(){
     return(
         <>
         <div className='head-container'>
-            <h2>Quiz App</h2>
-        <h3>Question 1</h3>
+            <h3>Quiz App</h3>
+        <h4>Question 1</h4>
         <p>What is the capital of France? </p>
         </div>
          
